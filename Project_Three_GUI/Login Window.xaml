@@ -12,8 +12,10 @@
        
         <TextBox x:Name="Message" Text="Oops! Incorrect user name or password." HorizontalAlignment="Left" Margin="556,210,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <Label Content="Dunwoody Housing Application" HorizontalAlignment="Center" Margin="35,99,35,0" VerticalAlignment="Top" FontSize="28" Background="Red"/>
-        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="598,304,0,0" VerticalAlignment="Top" Width="90" Background="Salmon" FontSize="20" Click="QuitButton_Click"/>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="481,304,0,0" VerticalAlignment="Top" Width="90" Background="Green" FontSize="20" Click="LoginButton_Click"/>
-
+        <Button x:Name="QuitButton" Style="{StaticResource ButtonStyle}" Content="Quit" HorizontalAlignment="Left" Margin="598,304,0,0" VerticalAlignment="Top" Width="90" Background="Salmon"  Click="QuitButton_Click"/>
+        <Button x:Name="LoginButton" Style="{StaticResource ButtonStyle}" Content="Login" HorizontalAlignment="Left" Margin="481,304,0,0" VerticalAlignment="Top"  Background="Green"  Click="LoginButton_Click" />
+        <Grid.Background>
+            <ImageBrush ImageSource="Dunwoody-June-2017-Parade-Crop-2-1024x492.jpg"  />
+        </Grid.Background>
     </Grid>
 </Window>

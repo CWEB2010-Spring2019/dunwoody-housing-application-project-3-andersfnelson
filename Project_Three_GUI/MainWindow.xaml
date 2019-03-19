@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Three_GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Dunwoody Housing" Height="450" Width="800">
     <Grid>
-        <Label Content="This is the main window" HorizontalAlignment="Left" Margin="324,102,0,0" VerticalAlignment="Top"/>
+        <Label Content="Login Successful!" HorizontalAlignment="Left" Margin="324,10,0,0" VerticalAlignment="Top"/>
+        <TabControl TabStripPlacement="Top" Margin="0,50,0,0">
+            <TabItem Header="Selection">
+                <Label Content="Content goes here..." />
+            </TabItem>
+            <TabItem Header="New Resident">
+                <Label Content="More content" />
+            </TabItem>
+            <TabItem Header="Resident Search" >
+                <Grid>
+                    <Label Content=" More stuff"/>
+                </Grid>
+                
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
