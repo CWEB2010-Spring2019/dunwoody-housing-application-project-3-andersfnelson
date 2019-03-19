@@ -26,7 +26,8 @@ namespace Project_Three_GUI
         }
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
-
+            AddStudent addStudent = new AddStudent();
+            this.NavigationService.Navigate(addStudent);
         }
 
         private void ViewButton_Click(object sender, RoutedEventArgs e)
