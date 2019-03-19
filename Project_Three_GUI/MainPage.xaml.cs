@@ -16,15 +16,14 @@ using System.Windows.Shapes;
 namespace Project_Three_GUI
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
         }
-
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -32,7 +31,8 @@ namespace Project_Three_GUI
 
         private void ViewButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ViewStudents viewStudents = new ViewStudents();
+            this.NavigationService.Navigate(viewStudents);
         }
     }
 }
