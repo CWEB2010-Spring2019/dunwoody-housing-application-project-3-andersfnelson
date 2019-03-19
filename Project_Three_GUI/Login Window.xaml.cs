@@ -37,11 +37,13 @@ namespace Project_Three_GUI
             UserPassword = PasswordBox.Text;
             if (Username == CorrectUsername || UserPassword == CorrectPassword)
             {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
                 this.Close();
             }
             else
             {
-                Console.WriteLine("not successful");
+                Message.Visibility = Visibility.Visible;
             }
             
         }
