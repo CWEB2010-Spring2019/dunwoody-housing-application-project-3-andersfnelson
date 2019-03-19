@@ -47,6 +47,10 @@ namespace Project_Three_GUI
             }
             
         }
-       
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
