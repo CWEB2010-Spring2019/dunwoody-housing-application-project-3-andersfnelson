@@ -20,9 +20,35 @@ namespace Project_Three_GUI
     /// </summary>
     public partial class AddStudent : Page
     {
+        List<student> studentList;
         public AddStudent()
         {
             InitializeComponent();
+            GlobalStuff anInstance = new GlobalStuff();
+            
+        }
+
+        private void View_btn_Click(object sender, RoutedEventArgs e)
+        {
+            ViewStudents viewStudents = new ViewStudents();
+            this.NavigationService.Navigate(viewStudents);
+        }
+
+        private void Add_btn_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                if (StudentType.SelectedItem == Athlete)
+                {
+                    App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                    MessageBox.Show("New athlete added successfully!");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Oops, that didn't work.");
+            }
         }
     }
 }

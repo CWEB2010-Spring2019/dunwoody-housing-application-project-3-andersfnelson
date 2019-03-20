@@ -13,5 +13,16 @@ namespace Project_Three_GUI
     /// </summary>
     public partial class App : Application
     {
+        public static List<student> studentList = GetStudents();
+
+
+
+        public static List<student> GetStudents()
+        {
+            List<student> studentList = new List<student>();
+            athlete testAthlete = new athlete(5, 600, 777, "Anders", "Nelson", 56);
+            studentList.Add(testAthlete);
+            return studentList;
+        }
     }
 }

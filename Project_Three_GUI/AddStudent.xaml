@@ -9,7 +9,20 @@
       Title="AddStudent">
 
     <Grid>
-        <Label Content="Add Student" HorizontalAlignment="Left" Margin="290,129,0,0" VerticalAlignment="Top"/>
+        <Label Content="Add Student" HorizontalAlignment="Left" Margin="337,47,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="View_btn" Content="View Students" HorizontalAlignment="Left" Margin="529,319,0,0" VerticalAlignment="Top" Width="75" Click="View_btn_Click"/>
+        <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="23" Margin="182,167,0,0" TextWrapping="Wrap" Text="ID Number" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="lnameBox" HorizontalAlignment="Left" Height="23" Margin="182,195,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="fnameBox" HorizontalAlignment="Left" Height="23" Margin="182,220,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="roomNumBox" HorizontalAlignment="Left" Height="23" Margin="182,245,0,0" TextWrapping="Wrap" Text="Room Number" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="rentBox" HorizontalAlignment="Left" Height="23" Margin="182,270,0,0" TextWrapping="Wrap" Text="Monthly Rent" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="floorBox" HorizontalAlignment="Left" Height="23" Margin="182,295,0,0" TextWrapping="Wrap" Text="Floor" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="StudentType" HorizontalAlignment="Left" Margin="182,50,0,0" VerticalAlignment="Top" Width="120" >
+            <ComboBoxItem>Student Worker</ComboBoxItem>
+            <ComboBoxItem>Scholarship Recipient</ComboBoxItem>
+            <ComboBoxItem x:Name="Athlete">Athlete</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="add_btn" Content="Add Student" HorizontalAlignment="Left" Margin="395,323,0,0" VerticalAlignment="Top" Width="75" Click="Add_btn_Click"/>
 
     </Grid>
 </Page>

@@ -13,10 +13,10 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Student ID" Binding="{Binding idNumber}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding lastName}"/>
-                <DataGridTextColumn Header="FirstName" Binding="{Binding firstName}"/>
-                <DataGridTextColumn Header="Room Number"/>
+                <DataGridTextColumn Header="First Name" Binding="{Binding firstName}"/>
+                <DataGridTextColumn Header="Room Number" Binding="{Binding roomNumber}"/>
                 <DataGridTextColumn Header="Monthly Rent" Binding="{Binding monthlyRent}"/>
-                <DataGridTextColumn Header="Floor"/>
+                <DataGridTextColumn Header="Floor" Binding="{Binding residentFloor}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

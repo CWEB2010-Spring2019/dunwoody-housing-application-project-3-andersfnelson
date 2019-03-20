@@ -15,6 +15,16 @@ using System.Windows.Shapes;
 
 namespace Project_Three_GUI
 {
+    class GlobalStuff
+    {
+         public List<student> studentList;
+
+        public GlobalStuff()
+        {
+            ViewStudents aStudent = new ViewStudents();
+            studentList = aStudent.globalStudentList;
+        }
+    }
     /// <summary>
     /// Interaction logic for ViewStudents.xaml
     /// </summary>
@@ -24,7 +34,7 @@ namespace Project_Three_GUI
         public ViewStudents()
         {
             InitializeComponent();
-            StudentGrid.ItemsSource = globalStudentList;
+            StudentGrid.ItemsSource = App.studentList;
         }
 
         public static List<student> GetStudents()

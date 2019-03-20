@@ -20,6 +20,8 @@ namespace Project_Three_GUI
     /// </summary>
     public partial class MainWindow : NavigationWindow
     {
+
+        
         string searchPlaceholder = "Search by student id";
         
         public MainWindow()
