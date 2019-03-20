@@ -41,15 +41,21 @@ namespace Project_Three_GUI
             {
                 if (StudentType.SelectedItem == Athlete)
                 {
-                    App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
-                    MessageBox.Show("New athlete added successfully!");
+                    if (Convert.ToInt32(floorBox.Text) == 4 || Convert.ToInt32(floorBox.Text) == 5 || Convert.ToInt32(floorBox.Text) == 6)
+                    {
+
+                        App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                        MessageBox.Show("New athlete added successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Athletes can only reside on floors 4, 5, or 6.\n Please make sure you have entered a valid floor number.");
+                    }
                 }
                 else if(StudentType.SelectedItem == ScholarshipRecipient)
                 {
-                    
-                        App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
-                        MessageBox.Show("New scholarship recipient added successfully!");
-                    
+                    App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                    MessageBox.Show("New scholarship recipient added successfully!");
                 }
                 else if (StudentType.SelectedItem == StudentWorker)
                 {

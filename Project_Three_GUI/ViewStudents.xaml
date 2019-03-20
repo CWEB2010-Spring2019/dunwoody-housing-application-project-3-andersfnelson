@@ -9,7 +9,7 @@
       Title="ViewStudents">
 
     <Grid>
-        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="100" Margin="100,183,100,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False">
+        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="100" Margin="100,183,100,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Student ID" Binding="{Binding idNumber}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding lastName}"/>
@@ -19,5 +19,8 @@
                 <DataGridTextColumn Header="Floor" Binding="{Binding residentFloor}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden">
+           
+        </Button>
     </Grid>
 </Page>
