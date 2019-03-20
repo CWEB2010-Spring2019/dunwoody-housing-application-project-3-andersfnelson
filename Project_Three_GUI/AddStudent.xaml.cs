@@ -44,6 +44,18 @@ namespace Project_Three_GUI
                     App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
                     MessageBox.Show("New athlete added successfully!");
                 }
+                else if(StudentType.SelectedItem == ScholarshipRecipient)
+                {
+                    
+                        App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                        MessageBox.Show("New scholarship recipient added successfully!");
+                    
+                }
+                else if (StudentType.SelectedItem == StudentWorker)
+                {
+                    App.studentList.Add(new worker(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                    MessageBox.Show("New student worker added successfully!");
+                }
             }
             catch
             {
