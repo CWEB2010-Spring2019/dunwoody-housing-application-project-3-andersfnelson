@@ -20,9 +20,19 @@ namespace Project_Three_GUI
     /// </summary>
     public partial class ViewStudents : Page
     {
+        public List<student> globalStudentList = GetStudents();
         public ViewStudents()
         {
             InitializeComponent();
+            StudentGrid.ItemsSource = globalStudentList;
+        }
+
+        public static List<student> GetStudents()
+        {
+            List<student> studentList = new List<student>();
+            athlete testAthlete = new athlete(5, 600, 777, "Anders", "Nelson", 56);
+            studentList.Add(testAthlete);
+            return studentList;
         }
     }
 }

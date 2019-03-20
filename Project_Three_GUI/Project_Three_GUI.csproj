@@ -58,9 +58,13 @@
     <Compile Include="AddStudent.xaml.cs">
       <DependentUpon>AddStudent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="athlete.cs" />
+    <Compile Include="scholarshipRecipient.cs" />
+    <Compile Include="student.cs" />
     <Compile Include="ViewStudents.xaml.cs">
       <DependentUpon>ViewStudents.xaml</DependentUpon>
     </Compile>
+    <Compile Include="worker.cs" />
     <Page Include="AddStudent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
