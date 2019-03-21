@@ -9,8 +9,9 @@
       Title="AddStudent">
 
     <Grid>
+        <Image x:Name="DunwoodyD" Source="dunwoodyd.png" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="Add Student" HorizontalAlignment="Left" Margin="337,47,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="View_btn" Content="View Students" HorizontalAlignment="Left" Margin="529,319,0,0" VerticalAlignment="Top" Width="75" Click="View_btn_Click"/>
+        <Button x:Name="View_btn" Style="{StaticResource ButtonStyle}" Content="View Students" HorizontalAlignment="Left" Margin="611,323,0,0" VerticalAlignment="Top" Click="View_btn_Click"/>
         <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="23" Margin="182,167,0,0" TextWrapping="Wrap" Text="ID Number" VerticalAlignment="Top" Width="120"/>
         <TextBox  x:Name="lnameBox" HorizontalAlignment="Left" Height="23" Margin="182,195,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
         <TextBox  x:Name="fnameBox" HorizontalAlignment="Left" Height="23" Margin="182,220,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120"/>
@@ -22,7 +23,7 @@
             <ComboBoxItem x:Name="ScholarshipRecipient">Scholarship Recipient</ComboBoxItem>
             <ComboBoxItem x:Name="Athlete">Athlete</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="add_btn" Content="Add Student" HorizontalAlignment="Left" Margin="395,323,0,0" VerticalAlignment="Top" Width="75" Click="Add_btn_Click"/>
+        <Button x:Name="add_btn" Style="{StaticResource ButtonStyle}" Content="Add Student" HorizontalAlignment="Left" Margin="395,323,0,0" VerticalAlignment="Top" Click="Add_btn_Click"/>
 
     </Grid>
 </Page>

@@ -19,7 +19,7 @@
                 <DataGridTextColumn Header="Floor" Binding="{Binding residentFloor}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden">
+        <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Visibility="Hidden">
            
         </Button>
     </Grid>

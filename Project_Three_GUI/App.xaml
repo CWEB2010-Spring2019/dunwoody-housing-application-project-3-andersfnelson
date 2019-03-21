@@ -7,9 +7,11 @@
     
     <Application.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Width" Value="90"/>
+            <Setter Property="Width" Value = "150"/>
+            <Setter Property="Height" Value="Auto"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
+        <Image x:Key="DunwoodyD" Source="dunwoodyd.png" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
          
     </Application.Resources>
 </Application>
