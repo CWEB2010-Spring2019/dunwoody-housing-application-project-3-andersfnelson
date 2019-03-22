@@ -20,8 +20,6 @@ namespace Project_Three_GUI
         public static List<student> GetStudents()
         {
             List<student> studentList = new List<student>();
-            athlete testAthlete = new athlete(4, 600, 0001, "Anders", "Nelson", 56);
-            studentList.Add(testAthlete);
             return studentList;
         }
     }

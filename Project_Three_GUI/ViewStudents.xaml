@@ -23,7 +23,7 @@
         <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Visibility="Hidden">
            
         </Button>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="530,110,0,0" TextWrapping="Wrap" Text="Search by id number" VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="466,120,0,0" TextWrapping="Wrap" Text="Search by id number (no leading zeros please)" VerticalAlignment="Top" Width="300" TextChanged="SearchBox_TextChanged"/>
         <Button x:Name="SearchReset" Style ="{StaticResource ButtonStyle}" Content="Reset View" HorizontalAlignment="Left" Margin="500,148,0,0" VerticalAlignment="Top" Click="SearchReset_Click"/>
 
     </Grid>

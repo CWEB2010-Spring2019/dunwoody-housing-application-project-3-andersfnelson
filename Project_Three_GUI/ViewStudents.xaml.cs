@@ -35,10 +35,11 @@ namespace Project_Three_GUI
         public ViewStudents()
         {
             InitializeComponent();
-            var _bind = from a in globalStudentList
+            //.ToString("D4")
+            var _bind = from a in App.studentList
                         select new
                         {
-                            idNumber = a.idNumber,
+                            idNumber = a.idNumber.ToString("D4"),
                             lastName = a.lastName,
                             firstName = a.firstName,
                             roomNumber = a.roomNumber,
@@ -51,8 +52,10 @@ namespace Project_Three_GUI
         public static List<student> GetStudents()
         {
             List<student> studentList = new List<student>();
-            athlete testAthlete = new athlete(5, 600, 777, "Anders", "Nelson", 56);
-            studentList.Add(testAthlete);
+            athlete testAthlete = new athlete(5, 600, 0001, "Chris", "Fulton", 56);
+            App.studentList.Add(testAthlete);
+            worker staticWorker = new worker(1, 1245, 0002, "John", "Doe", 12);
+            App.studentList.Add(staticWorker);
             return studentList;
         }
 
@@ -60,7 +63,7 @@ namespace Project_Three_GUI
         {
             var searchText = SearchBox.Text;
             var search =
-                from a in globalStudentList
+                from a in App.studentList
                 where Convert.ToString(a.idNumber) == searchText
                 select new
                 {
@@ -77,10 +80,10 @@ namespace Project_Three_GUI
 
         private void SearchReset_Click(object sender, RoutedEventArgs e)
         {
-            var _bind = from a in globalStudentList
+            var _bind = from a in App.studentList
                         select new
                         {
-                            idNumber = a.idNumber,
+                            idNumber = a.idNumber.ToString("D4"),
                             lastName = a.lastName,
                             firstName = a.firstName,
                             roomNumber = a.roomNumber,
