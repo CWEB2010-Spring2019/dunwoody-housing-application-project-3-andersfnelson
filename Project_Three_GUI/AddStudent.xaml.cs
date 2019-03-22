@@ -83,7 +83,7 @@ namespace Project_Three_GUI
             }
             catch
             {
-                MessageBox.Show("Oops, that didn't work.");
+                MessageBox.Show("An unknown error occured. Make sure all fields have been filled in correctly.");
             }
         }
     }

@@ -22,7 +22,7 @@ namespace Project_Three_GUI
     {
 
         
-        string searchPlaceholder = "Search by student id";
+        
         
         public MainWindow()
         {

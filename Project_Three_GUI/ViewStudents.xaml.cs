@@ -31,10 +31,21 @@ namespace Project_Three_GUI
     public partial class ViewStudents : Page
     {
         public List<student> globalStudentList = GetStudents();
+
         public ViewStudents()
         {
             InitializeComponent();
-            StudentGrid.ItemsSource = App.studentList;
+            var _bind = from a in globalStudentList
+                        select new
+                        {
+                            idNumber = a.idNumber,
+                            lastName = a.lastName,
+                            firstName = a.firstName,
+                            roomNumber = a.roomNumber,
+                            monthlyRent = a.monthlyRent,
+                            residentFloor = a.residentFloor
+                        };
+            StudentGrid.ItemsSource = _bind;
         }
 
         public static List<student> GetStudents()
@@ -44,6 +55,39 @@ namespace Project_Three_GUI
             studentList.Add(testAthlete);
             return studentList;
         }
-        
+
+        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var searchText = SearchBox.Text;
+            var search =
+                from a in globalStudentList
+                where Convert.ToString(a.idNumber) == searchText
+                select new
+                {
+                    idNumber = a.idNumber,
+                    lastName = a.lastName,
+                    firstName = a.firstName,
+                    roomNumber = a.roomNumber,
+                    monthlyRent = a.monthlyRent,
+                    residentFloor = a.residentFloor
+                }; ;
+            StudentGrid.ItemsSource = search;
+
+        }
+
+        private void SearchReset_Click(object sender, RoutedEventArgs e)
+        {
+            var _bind = from a in globalStudentList
+                        select new
+                        {
+                            idNumber = a.idNumber,
+                            lastName = a.lastName,
+                            firstName = a.firstName,
+                            roomNumber = a.roomNumber,
+                            monthlyRent = a.monthlyRent,
+                            residentFloor = a.residentFloor
+                        };
+            StudentGrid.ItemsSource = _bind;
+        }
     }
 }

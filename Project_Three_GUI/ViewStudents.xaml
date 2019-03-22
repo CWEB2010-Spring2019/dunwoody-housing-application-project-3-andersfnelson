@@ -6,10 +6,11 @@
       xmlns:local="clr-namespace:Project_Three_GUI"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ViewStudents">
+      Title="ViewStudents"
+      Background="#AD1E30">
 
     <Grid>
-        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="100" Margin="100,183,100,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False" >
+        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="100" Margin="100,183,100,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False" Visibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Student ID" Binding="{Binding idNumber}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding lastName}"/>
@@ -22,5 +23,8 @@
         <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Visibility="Hidden">
            
         </Button>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="530,110,0,0" TextWrapping="Wrap" Text="Search by id number" VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged"/>
+        <Button x:Name="SearchReset" Style ="{StaticResource ButtonStyle}" Content="Reset View" HorizontalAlignment="Left" Margin="500,148,0,0" VerticalAlignment="Top" Click="SearchReset_Click"/>
+
     </Grid>
 </Page>
