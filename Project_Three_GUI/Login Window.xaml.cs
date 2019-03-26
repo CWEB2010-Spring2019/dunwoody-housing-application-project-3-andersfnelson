@@ -25,7 +25,11 @@ namespace Project_Three_GUI
         public Login_Window()
         {
             InitializeComponent();
+           
         }
+
+      
+
         public string Username;
         public string UserPassword;
         public string CorrectUsername = "home";
@@ -35,7 +39,7 @@ namespace Project_Three_GUI
         {
             Username = UsernameBox.Text;
             UserPassword = PasswordBox.Text;
-            if (Username == CorrectUsername || UserPassword == CorrectPassword)
+            if (Username == CorrectUsername && UserPassword == CorrectPassword)
             {
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
