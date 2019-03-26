@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Dunwoody Housing" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="UsernameBox" HorizontalAlignment="Left" Height="23" Margin="143,210,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="143,240,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="UsernameBox" HorizontalAlignment="Left" Height="23" Margin="143,210,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="120" MouseDoubleClick="uBoxClick"/>
+        <TextBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="23" Margin="143,240,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="120" MouseDoubleClick="PasswordBox_MouseDoubleClick"/>
        
         <TextBox x:Name="Message" Text="Oops! Incorrect user name or password." HorizontalAlignment="Left" Margin="556,210,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
         <Label Content="Dunwoody Housing Application" HorizontalAlignment="Center" Margin="35,99,35,0" VerticalAlignment="Top" FontSize="28" Background="#AD1E30"/>

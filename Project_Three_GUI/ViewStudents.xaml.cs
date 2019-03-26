@@ -19,18 +19,14 @@ namespace Project_Three_GUI
     {
          public List<student> studentList;
 
-        public GlobalStuff()
-        {
-            ViewStudents aStudent = new ViewStudents();
-            studentList = aStudent.globalStudentList;
-        }
+       
     }
     /// <summary>
     /// Interaction logic for ViewStudents.xaml
     /// </summary>
     public partial class ViewStudents : Page
     {
-        public List<student> globalStudentList = GetStudents();
+       
 
         public ViewStudents()
         {
@@ -49,15 +45,7 @@ namespace Project_Three_GUI
             StudentGrid.ItemsSource = _bind;
         }
 
-        public static List<student> GetStudents()
-        {
-            List<student> studentList = new List<student>();
-            athlete testAthlete = new athlete(5, 600, 0001, "Chris", "Fulton", 56);
-            App.studentList.Add(testAthlete);
-            worker staticWorker = new worker(1, 1245, 0002, "John", "Doe", 12);
-            App.studentList.Add(staticWorker);
-            return studentList;
-        }
+        
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -80,6 +68,7 @@ namespace Project_Three_GUI
 
         private void SearchReset_Click(object sender, RoutedEventArgs e)
         {
+            SearchBox.Text = "Search by id number (no leading zeros please)";
             var _bind = from a in App.studentList
                         select new
                         {
@@ -91,6 +80,7 @@ namespace Project_Three_GUI
                             residentFloor = a.residentFloor
                         };
             StudentGrid.ItemsSource = _bind;
+           
         }
     }
 }

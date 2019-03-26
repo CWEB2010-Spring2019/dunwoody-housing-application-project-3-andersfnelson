@@ -10,7 +10,7 @@
       Background="#AD1E30">
 
     <Grid>
-        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="100" Margin="100,183,100,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False" Visibility="Visible">
+        <DataGrid x:Name="StudentGrid" HorizontalAlignment="Center" Height="337" Margin="150,103,150,0" VerticalAlignment="Top" Width="500" AutoGenerateColumns="False" Visibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Student ID" Binding="{Binding idNumber}"/>
                 <DataGridTextColumn Header="Last Name" Binding="{Binding lastName}"/>
@@ -21,10 +21,10 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="DelButton" Content="Delete Student" HorizontalAlignment="Left" Margin="628,356,0,0" VerticalAlignment="Top" Visibility="Hidden">
-           
+
         </Button>
-        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="466,120,0,0" TextWrapping="Wrap" Text="Search by id number (no leading zeros please)" VerticalAlignment="Top" Width="300" TextChanged="SearchBox_TextChanged"/>
-        <Button x:Name="SearchReset" Style ="{StaticResource ButtonStyle}" Content="Reset View" HorizontalAlignment="Left" Margin="500,148,0,0" VerticalAlignment="Top" Click="SearchReset_Click"/>
+        <TextBox x:Name="SearchBox" HorizontalAlignment="Left" Height="23" Margin="470,40,0,0" TextWrapping="Wrap" Text="Search by id number (no leading zeros please)" VerticalAlignment="Top" Width="300" TextChanged="SearchBox_TextChanged"/>
+        <Button x:Name="SearchReset" Style ="{StaticResource ButtonStyle}" Content="Reset View" HorizontalAlignment="Left" Margin="620,68,0,0" VerticalAlignment="Top" Click="SearchReset_Click"/>
 
     </Grid>
 </Page>

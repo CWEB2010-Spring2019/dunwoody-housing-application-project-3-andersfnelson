@@ -14,12 +14,15 @@ namespace Project_Three_GUI
     public partial class App : Application
     {
         public static List<student> studentList = GetStudents();
+       
         string searchPlaceholder = "Search by student id";
 
 
         public static List<student> GetStudents()
         {
             List<student> studentList = new List<student>();
+           
+
             return studentList;
         }
     }

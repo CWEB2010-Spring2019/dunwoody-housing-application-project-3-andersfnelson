@@ -25,7 +25,15 @@ namespace Project_Three_GUI
         public Login_Window()
         {
             InitializeComponent();
-           
+            
+                
+                athlete testAthlete = new athlete(5, 600, 0001, "Chris", "Fulton", 56);
+                App.studentList.Add(testAthlete);
+                worker staticWorker = new worker(1, 1245, 0002, "John", "Doe", 12);
+                App.studentList.Add(staticWorker);
+                
+            
+
         }
 
       
@@ -51,10 +59,20 @@ namespace Project_Three_GUI
             }
             
         }
+        private void uBoxClick(object sender, RoutedEventArgs e)
+        {
+            UsernameBox.Text = "";
+        }
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        private void PasswordBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            PasswordBox.Text = "";
+        }
+       
     }
 }
