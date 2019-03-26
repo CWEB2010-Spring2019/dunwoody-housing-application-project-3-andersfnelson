@@ -6,13 +6,14 @@
       xmlns:local="clr-namespace:Project_Three_GUI"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Background="#AD1E30"
       Title="MainPage">
 
     <Grid>
         <Grid>
             <Label Content="Login Successful!" HorizontalAlignment="Left" Margin="324,10,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="CreateButton" Style="{StaticResource ButtonStyle}" Content="Create student" HorizontalAlignment="Left" Margin="125,325,0,0" VerticalAlignment="Top" Width="150" Click="CreateButton_Click"/>
-            <Button x:Name="ViewButton" Style="{StaticResource ButtonStyle}" Content="View Residents" HorizontalAlignment="Left" Margin="405,325,0,0" VerticalAlignment="Top" Width="150" Click="ViewButton_Click"/>
+            <Button x:Name="CreateButton" Style="{StaticResource ButtonStyle}" Content="Create student" HorizontalAlignment="Left" Margin="175,325,175,0" VerticalAlignment="Top" Width="150" Click="CreateButton_Click"/>
+            <Button x:Name="ViewButton" Style="{StaticResource ButtonStyle}" Content="View Residents" HorizontalAlignment="Right" Margin="175,325,175,0" VerticalAlignment="Top" Width="150" Click="ViewButton_Click"/>
             <Image Source="dunwoodyd.png" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
 
 

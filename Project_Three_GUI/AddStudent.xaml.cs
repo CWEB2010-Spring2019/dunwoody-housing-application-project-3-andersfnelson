@@ -41,28 +41,46 @@ namespace Project_Three_GUI
             {
                 if (StudentType.SelectedItem == Athlete)
                 {
-                    if (Convert.ToInt32(floorBox.Text) == 4 || Convert.ToInt32(floorBox.Text) == 5 || Convert.ToInt32(floorBox.Text) == 6)
+                    if (Convert.ToInt32(rentBox.Text) == 1200)
                     {
+                        if (Convert.ToInt32(floorBox.Text) == 4 || Convert.ToInt32(floorBox.Text) == 5 || Convert.ToInt32(floorBox.Text) == 6)
+                        {
 
-                        App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
-                        MessageBox.Show("New athlete added successfully!");
+                            App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                            MessageBox.Show("New athlete added successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Athletes can only reside on floors 4, 5, or 6.\nPlease make sure you have entered a valid floor number.");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Athletes can only reside on floors 4, 5, or 6.\nPlease make sure you have entered a valid floor number.");
+                        MessageBox.Show("Athletes rent is $1200 per month.\nThe rent will be automatically corrected.");
+                        App.studentList.Add(new athlete(Convert.ToInt32(floorBox.Text), 1200, Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                        MessageBox.Show("New athlete added successfully!");
                     }
                 }
                 //floors 7 and 8
                 else if(StudentType.SelectedItem == ScholarshipRecipient)
                 {
-                    if (Convert.ToInt32(floorBox.Text) == 7 || Convert.ToInt32(floorBox.Text) == 7)
+                    if (Convert.ToInt32(rentBox.Text) == 100)
                     {
-                        App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
-                        MessageBox.Show("New scholarship recipient added successfully!");
+                        if (Convert.ToInt32(floorBox.Text) == 7 || Convert.ToInt32(floorBox.Text) == 7)
+                        {
+                            App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                            MessageBox.Show("New scholarship recipient added successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Scholarship recipients can only reside on floors 7 or 8.\nPlease make sure you have entered a valid floor number.");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Scholarship recipients can only reside on floors 7 or 8.\nPlease make sure you have entered a valid floor number.");
+                        MessageBox.Show("Scholarship recipients pay a flat rate of $100 per month.\nThe rent will be automatically corrected.");
+                        App.studentList.Add(new scholarshipRecipient(Convert.ToInt32(floorBox.Text), 100, Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                        MessageBox.Show("New scholarship recipient added successfully!");
                     }
                 }
 
@@ -85,6 +103,19 @@ namespace Project_Three_GUI
             {
                 MessageBox.Show("An unknown error occured. Make sure all fields have been filled in correctly.");
             }
+        }
+
+        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(StudentType.SelectedItem == ScholarshipRecipient)
+            {
+                rentBox.Text = "100";
+            }
+            else if(StudentType.SelectedItem == Athlete)
+            {
+                rentBox.Text = "1200";
+            }
+            //Need to implement worker logic
         }
     }
 }

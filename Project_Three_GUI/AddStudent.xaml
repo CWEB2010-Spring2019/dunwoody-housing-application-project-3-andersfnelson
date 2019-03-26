@@ -13,18 +13,24 @@
         <Image x:Name="DunwoodyD" Source="dunwoodyd.png" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100"/>
         <Label Content="Add a New Student"  Margin="0,55,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
         <Button x:Name="View_btn" Style="{StaticResource ButtonStyle}" Content="View Students" HorizontalAlignment="Left" Margin="611,323,0,0" VerticalAlignment="Top" Click="View_btn_Click"/>
-        <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="23" Margin="182,167,0,0" TextWrapping="Wrap" Text="ID Number" VerticalAlignment="Top" Width="120"/>
-        <TextBox  x:Name="lnameBox" HorizontalAlignment="Left" Height="23" Margin="182,195,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
-        <TextBox  x:Name="fnameBox" HorizontalAlignment="Left" Height="23" Margin="182,220,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120"/>
-        <TextBox  x:Name="roomNumBox" HorizontalAlignment="Left" Height="23" Margin="182,245,0,0" TextWrapping="Wrap" Text="Room Number" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="rentBox" HorizontalAlignment="Left" Height="23" Margin="182,270,0,0" TextWrapping="Wrap" Text="Monthly Rent" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="floorBox" HorizontalAlignment="Left" Height="23" Margin="182,295,0,0" TextWrapping="Wrap" Text="Floor" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="StudentType" Text="Select Student Type" HorizontalAlignment="Left" Margin="152,55,0,0" VerticalAlignment="Top" Width="150" IsEditable="True" IsReadOnly="True">
+        <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="23" Margin="182,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="lnameBox" HorizontalAlignment="Left" Height="23" Margin="182,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="fnameBox" HorizontalAlignment="Left" Height="23" Margin="182,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox  x:Name="roomNumBox" HorizontalAlignment="Left" Height="23" Margin="182,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="rentBox" HorizontalAlignment="Left" Height="23" Margin="182,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="floorBox" HorizontalAlignment="Left" Height="23" Margin="182,295,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="StudentType" Text="Select Student Type" HorizontalAlignment="Left" Margin="152,55,0,0" VerticalAlignment="Top" Width="150" IsEditable="True" IsReadOnly="True" SelectionChanged="SelectionChanged">
             <ComboBoxItem x:Name="StudentWorker">Student Worker</ComboBoxItem>
             <ComboBoxItem x:Name="ScholarshipRecipient">Scholarship Recipient</ComboBoxItem>
             <ComboBoxItem x:Name="Athlete">Athlete</ComboBoxItem>
         </ComboBox>
         <Button x:Name="add_btn" Style="{StaticResource ButtonStyle}" Content="Add Student" HorizontalAlignment="Left" Margin="395,323,0,0" VerticalAlignment="Top" Click="Add_btn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="106,276,0,0" TextWrapping="Wrap" Text="Monthly Rent" VerticalAlignment="Top" Height="17" RenderTransformOrigin="0.532,1.212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="99,252,0,0" TextWrapping="Wrap" Text="Room Number" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="120,227,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="121,202,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="118,174,0,0" TextWrapping="Wrap" Text="ID Number" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="149,302,0,0" TextWrapping="Wrap" Text="Floor" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>
