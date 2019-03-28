@@ -87,10 +87,14 @@ namespace Project_Three_GUI
                 //floors 1/3
                 else if (StudentType.SelectedItem == StudentWorker)
                 {
+                    
+
                     if (Convert.ToInt32(floorBox.Text) == 1 || Convert.ToInt32(floorBox.Text) == 2 || Convert.ToInt32(floorBox.Text) == 3)
                     {
-                        App.studentList.Add(new worker(Convert.ToInt32(floorBox.Text), Convert.ToInt32(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
-                        MessageBox.Show("New student worker added successfully!");
+
+                        App.studentList.Add(new worker(Convert.ToInt32(floorBox.Text), Convert.ToDouble(rentBox.Text), Convert.ToInt32(idBox.Text), fnameBox.Text, lnameBox.Text, Convert.ToInt32(roomNumBox.Text)));
+                        
+                        MessageBox.Show("New student worker added successfully!\nThe student's rent was automatically calculated based on their hours worked.");
                     }
                     else
                     {
@@ -114,6 +118,10 @@ namespace Project_Three_GUI
             else if(StudentType.SelectedItem == Athlete)
             {
                 rentBox.Text = "1200";
+            }
+            else if(StudentType.SelectedItem == StudentWorker)
+            {
+                rentBox.Text = "Enter hours worked per month";
             }
             //Need to implement worker logic
         }

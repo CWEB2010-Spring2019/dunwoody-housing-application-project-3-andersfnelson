@@ -29,7 +29,7 @@ namespace Project_Three_GUI
                 
                 athlete testAthlete = new athlete(5, 600, 0001, "Chris", "Fulton", 56);
                 App.studentList.Add(testAthlete);
-                worker staticWorker = new worker(1, 1245, 0002, "John", "Doe", 12);
+                worker staticWorker = new worker(1, 0, 0002, "John", "Doe", 12);
                 App.studentList.Add(staticWorker);
                 
             

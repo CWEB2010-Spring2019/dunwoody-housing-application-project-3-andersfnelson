@@ -10,17 +10,30 @@ namespace Project_Three_GUI
     {
 
         //Default constructor
-        
-        
-            public worker(int residentFloor, int monthlyRent, int idNumber, string firstName, string lastName, int roomNumber)
+        double hourlyWage = 14.00;
+        double baseRent = 1245;
+        double hoursWorked;
+
+        public worker(int residentFloor, double hoursWorked, int idNumber, string firstName, string lastName, int roomNumber)
+        {
+            hourlyWage = 14.00;
+            double monthlyPay = hoursWorked * hourlyWage;
+            this.residentFloor = residentFloor;
+            this.hoursWorked = hoursWorked;
+            this.idNumber = idNumber;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.roomNumber = roomNumber;
+            this.monthlyRent = Convert.ToInt32(baseRent - (0.5 * monthlyPay));
+        }
+            public int calculateRent(double hourlyWage, double hoursWorked, double baseRent)
             {
-                this.residentFloor = residentFloor;
-                this.monthlyRent = monthlyRent;
-                this.idNumber = idNumber;
-                this.firstName = firstName;
-                this.lastName = lastName;
-                this.roomNumber = roomNumber;
+                double monthlyPay = hoursWorked * hourlyWage;
+                monthlyRent = Convert.ToInt32(baseRent - (0.5 * monthlyPay));
+                return monthlyRent;
             }
+        
+        
         
     }
 
