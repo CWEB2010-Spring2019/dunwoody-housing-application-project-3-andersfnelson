@@ -25,7 +25,7 @@
             <ComboBoxItem x:Name="Athlete">Athlete</ComboBoxItem>
         </ComboBox>
         <Button x:Name="add_btn" Style="{StaticResource ButtonStyle}" Content="Add Student" HorizontalAlignment="Left" Margin="395,323,0,0" VerticalAlignment="Top" Click="Add_btn_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="106,276,0,0" TextWrapping="Wrap" Text="Monthly Rent" VerticalAlignment="Top" Height="17" RenderTransformOrigin="0.532,1.212"/>
+        <TextBlock x:Name="rentBlock" HorizontalAlignment="Left" Margin="106,276,0,0" TextWrapping="Wrap" Text="Monthly Rent" VerticalAlignment="Top" Height="17" RenderTransformOrigin="0.532,1.212"/>
         <TextBlock HorizontalAlignment="Left" Margin="99,252,0,0" TextWrapping="Wrap" Text="Room Number" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="120,227,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="121,202,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top"/>

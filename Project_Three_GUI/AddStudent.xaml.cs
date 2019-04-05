@@ -121,7 +121,8 @@ namespace Project_Three_GUI
             }
             else if(StudentType.SelectedItem == StudentWorker)
             {
-                rentBox.Text = "Enter hours worked per month";
+                rentBlock.Text = "Hours Worked";
+                
             }
             //Need to implement worker logic
         }
